@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JavaScript</title>
+</head>
+<body>
+    <div>
+        <label>Primeiro Valor</label>
+        <input type="text" id="campoNumero1">
+        <br><br>
+        <label>Segundo Valor</label>
+        <input type="text" id="campoNumero2">
+    </div>
+    <br>
+    
+    <div id="limparCampos"></div>
+
+    <div id="exibeValor">Resultado:</div>
+
+    <div>
+        <input type="button" id="botao" value="+" onclick="calcular('+')">
+        <input type="button" id="botao" value="-" onclick="calcular('-')">
+        <input type="button" id="botao" value="*" onclick="calcular('*')">
+        <input type="button" id="botao" value="/" onclick="calcular('/')">
+        <input type="button" id="botao" value="Limpar Campos" onclick="limparCampos()">
+    </div>
+    <script>
+        function calcular(operador){
+            var numero1 = parseInt(document.getElementById("campoNumero1").value);
+            var numero2 = parseInt(document.getElementById("campoNumero2").value);
+            var resultado = 0;
+            if(operador == "+"){
+                resultado = soma(numero1, numero2);
+            }
+            if(operador == "-"){
+                resultado = subtracao(numero1, numero2);
+            }
+            if(operador == "*"){
+                resultado = multiplicacao(numero1, numero2);
+            }
+            if(operador == "/"){
+                resultado = divisao(numero1, numero2);
+            }
+            document.getElementById("exibeValor").innerHTML = "O resultado do cálculo é " + resultado;
+        }
+        function soma(numero1, numero2){
+            return numero1 + numero2;
+        }
+        function subtracao(numero1, numero2){
+            return numero1 - numero2;
+        }
+        function multiplicacao(numero1, numero2){
+            return numero1 * numero2;
+        }
+        function divisao(numero1, numero2){
+            return numero1 / numero2;
+        }
+        function limparCampos(){
+            document.getElementById("campoNumero1").value = "";
+            document.getElementById("campoNumero2").value = "";
+            document.getElementById("exibeValor").innerHTML = "" + resultado;
+        }
+    </script>
+</body>
+</html>

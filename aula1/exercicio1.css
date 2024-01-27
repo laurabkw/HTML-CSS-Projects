@@ -1,0 +1,39 @@
+body{
+    background-color: blue;
+}
+
+.fundo_branco{
+    background-color: aliceblue;
+    padding: 10px 10px;
+    margin: 20% 20%;
+    height: 750px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.imagem{
+    background-image: url(../imagem/logo_senac.png);
+    background-repeat: no-repeat;
+    height: 200px;
+    size: 20px;
+}
+
+.menu_opcoes{
+    background-color: yellow;
+    text-align: center;
+    border-color: black;
+    border: 2px solid;
+    align-content: space-between;
+}
+
+.opcoes{
+    text-align: center;
+}
+
+h1{
+    font-size: 15px;
+}
+
+h2{
+    font-size: 12px;
+}

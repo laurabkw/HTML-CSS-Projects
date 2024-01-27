@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='numero_aleatorio.css'>
+    <title>Número Aleatório</title>
+</head>
+<body>
+    <div>
+        <h1>Digite um número de 0 a 10</h1>
+        <label>Valor: </label>
+        <input type="text" id="valorDigitado">
+    </div>
+    <br>
+    <div>
+        <input type="button" id="botao" value="Conferir número sorteado" onclick="conferirValor()">
+    </div>
+    <div>
+        
+    </div>
+
+    <script>
+        window.onload = function(e){
+            window.valorAleatorio = Math.floor(Math.random() * 10);
+        }
+        function conferirValor(){
+            if(parseInt(document.getElementById("valorDigitado").value) == valorAleatorio){
+                alert("Você acertou o valor sorteado");
+            }
+            else{
+                alert("Você errou o valor sorteado");
+            }
+        }
+    </script>
+</body>
+</html>

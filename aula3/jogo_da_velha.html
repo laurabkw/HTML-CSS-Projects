@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='jogo_da_velha.css'>
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <div>
+        <input type="button" class="campoJogo" id="bt1" value=" " onclick="jogada('bt1')">
+        <input type="button" class="campoJogo" id="bt2" value=" " onclick="jogada('bt2')">
+        <input type="button" class="campoJogo" id="bt3" value=" " onclick="jogada('bt3')">
+    </div>
+    <div>
+        <input type="button" class="campoJogo" id="bt4" value=" " onclick="jogada('bt4')">
+        <input type="button" class="campoJogo" id="bt5" value=" " onclick="jogada('bt5')">
+        <input type="button" class="campoJogo" id="bt6" value=" " onclick="jogada('bt6')">
+    </div>
+    <div>
+        <input type="button" class="campoJogo" id="bt7" value=" " onclick="jogada('bt7')">
+        <input type="button" class="campoJogo" id="bt8" value=" " onclick="jogada('bt8')">
+        <input type="button" class="campoJogo" id="bt9" value=" " onclick="jogada('bt9')">
+    </div>
+
+    <script>
+        window.jogada = "";
+        window.onload = function(){
+            window.jogada = "X";
+        }
+        
+        function jogada(parametro){
+        if(document.getElementById(parametro).value == " "){
+        
+        
+
+            document.getElementById(parametro).value = window.jogada;
+            if(window.jogada == "X"){
+                window.jogada = "O";
+            }else{
+               window.jogada = "X" ;
+            }
+
+            var valorBotao1 = document.getElementById("btn1").value;
+            var valorBotao2 = document.getElementById("btn2").value;
+            var valorBotao3 = document.getElementById("btn3").value;
+            var valorBotao4 = document.getElementById("btn4").value;
+            var valorBotao5 = document.getElementById("btn5").value;
+            var valorBotao6 = document.getElementById("btn6").value;
+            var valorBotao7 = document.getElementById("btn7").value;
+            var valorBotao8 = document.getElementById("btn8").value;
+            var valorBotao9 = document.getElementById("btn9").value;
+
+            var fimDejogo = false;
+            
+            if(valorBotao1 == valorBotao2 && valorBotao2 == valorBotao3 && valorBotao1 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn1").classList.add("corVencedor");
+                document.getElementById("btn2").classList.add("corVencedor");
+                document.getElementById("btn3").classList.add("corVencedor");
+            }
+            if(valorBotao4 == valorBotao5 && valorBotao5 == valorBotao6 && valorBotao4 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn4").classList.add("corVencedor");
+                document.getElementById("btn5").classList.add("corVencedor");
+                document.getElementById("btn6").classList.add("corVencedor");
+            }
+            if(valorBotao7 == valorBotao8 && valorBotao8 == valorBotao9 && valorBotao8 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn7").classList.add("corVencedor");
+                document.getElementById("btn8").classList.add("corVencedor");
+                document.getElementById("btn9").classList.add("corVencedor");
+            }
+            if(valorBotao1 == valorBotao4 && valorBotao4 == valorBotao7 && valorBotao1 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn1").classList.add("corVencedor");
+                document.getElementById("btn4").classList.add("corVencedor");
+                document.getElementById("btn7").classList.add("corVencedor");
+            }
+            if(valorBotao2 == valorBotao5 && valorBotao5 == valorBotao8 && valorBotao2 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn2").classList.add("corVencedor");
+                document.getElementById("btn5").classList.add("corVencedor");
+                document.getElementById("btn8").classList.add("corVencedor");
+            }
+            if(valorBotao3 == valorBotao6 && valorBotao6 == valorBotao9 && valorBotao3 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn3").classList.add("corVencedor");
+                document.getElementById("btn6").classList.add("corVencedor");
+                document.getElementById("btn9").classList.add("corVencedor");
+            }
+            if(valorBotao1 == valorBotao5 && valorBotao5 == valorBotao9 && valorBotao1 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn1").classList.add("corVencedor");
+                document.getElementById("btn5").classList.add("corVencedor");
+                document.getElementById("btn9").classList.add("corVencedor");
+            }
+            if(valorBotao3 == valorBotao5 && valorBotao5 == valorBotao7 && valorBotao3 != " "){
+                alert("A jogada " + valorBotao1 + "foi o vencedor!");
+                document.getElementById("btn3").classList.add("corVencedor");
+                document.getElementById("btn5").classList.add("corVencedor");
+                document.getElementById("btn7").classList.add("corVencedor");
+            }
+
+            if(fimDejogo = true){
+                document.getElementById("btn1").disabled = true;
+                document.getElementById("btn2").disabled = true;
+                document.getElementById("btn3").disabled = true;
+                document.getElementById("btn4").disabled = true;
+                document.getElementById("btn5").disabled = true;
+                document.getElementById("btn6").disabled = true;
+                document.getElementById("btn7").disabled = true;
+                document.getElementById("btn8").disabled = true;
+                document.getElementById("btn9").disabled = true;
+            }
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <div>
+        <label>Nome</label>
+        <input type="text" id="campoDeTexto">
+    </div>
+    <div id="exibeNome"></div>
+    <div>
+        <input type="button" id="botao" value="Exibir Nome" onclick="exibeNome()">
+    </div>
+
+    <script>
+        function exibeNome(){
+            var nome = document.getElementById("campoDeTexto").value;
+            alert("O nome digitado é " + nome);
+        }
+    </script>
+</body>
+</html>

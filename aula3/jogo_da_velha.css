@@ -1,0 +1,9 @@
+.campoJogo{
+    width: 200px;
+    height: 200px;
+    font-size: 120px;
+}
+
+.corVencedor{
+    color: green;
+}
