@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Aula JavaScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../css/aula_js.css">
+</head>
+<body>
+    <!-- aula dia 06/06 -->
+    <button class="adicionarSpan" onclick="adicionaTexto()">Adicionar Span</button>
+    <div id="div1">
+        CLIQUE AQUI
+    </div>
+    <div id="div1" class="containerMenu float-r design-foot">
+
+    </div>
+
+    <br>
+    <div class="divsVerdeAzul">
+        <div class="divVerde" id="divVerde" onclick="mostrarDivVerde()">
+            VERDE
+        </div>
+        <br>
+        <div class="divAzul" id="divAzul" onclick="esconderDivVerde()">
+            AZUL
+        </div>
+    </div>
+    <br>
+    <div class="divsCriadas">
+        <button class="addLinha" id="addLinha" onclick="novaLinha()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" fill="currentColor" class="iconeMais" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+            </svg>
+            Adicionar Linha
+        </button>
+        <div class="espacamento"></div>
+        <div id="container" class="container"></div>
+    </div>
+    <div class="tabelaAnimais" id="listaAnimais">
+        <!-- <table id="tabela">
+            <thead id="tabelaCabecalho">
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                </tr>       
+            </thead>
+            <tbody id="tabelaCorpo">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+    <div class="novaTabela" id="novaTabela">
+        <table>
+            <thead id="tabelaHead">
+            </thead>
+            <tbody id="tabelaBody">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function adidicionaTexto(){
+            /*criar o span*/
+            var meuSpan = document.createElement("span");
+            meuSpan.setAttribute("class", "spansCriadas");
+            meuSpan.innerText = "span";
+
+            /*código para acessar a div*/
+            var div1 = document.getElementById("div1");
+
+            /*código para adicionar span na div*/
+            div1.appendChild(meuSpan); 
+
+            /*uso do innerHTML*/
+            // div1.innerHTML = meuSpan; 
+        }
+
+        function abreMsg(){
+            // var minhaDiv = document.getElementById("div1");
+            var minhaDiv = document.querySelector("#div1");
+
+            minhaDiv.style = "border: 1px solid green; color: blue; font-size: 20px";
+
+            minhaDiv.innerText = "Texto adicionado via JavaScript";
+
+            minhaDiv.classList.add("minhaDiv");
+        }
+
+        function mostrarDivVerde(){
+            document.getElementById("divVerde").style.display = "none";
+            document.getElementById("divAzul").style.display = "flex";
+        }
+
+        function esconderDivVerde(){
+            document.getElementById("divAzul").style.display = "none";
+            document.getElementById("divVerde").style.display = "flex";
+        }
+
+        function novaLinha(){
+            var novoContainer = document.createElement("div");
+            novoContainer.setAttribute("class", "containerLinhas");
+            novoContainer.setAttribute("id", "containerLinhas");
+            var container2 = document.getElementById("container");
+            container2.appendChild(novoContainer);
+
+            var linha = document.createElement("div");
+            linha.setAttribute("class", "novaLinha");
+            linha.innerText = "Nome";
+            // var container = document.getElementById("containerLinhas"); usar somente se estiver em funções diferentes
+            novoContainer.appendChild(linha);
+
+            var linha1 = document.createElement("div");
+            var numRandom = Math.floor(Math.random(linha1) * 10);
+            linha1.setAttribute("class", "novaLinha");
+            linha1.innerText = numRandom;
+            // var container = document.getElementById("containerLinhas"); como estão em uma mesma função, não é necessário o getElementById
+            novoContainer.appendChild(linha1);
+        }
+
+        // window.onload = function(){
+        //     animais = [
+        //         "cachorro",
+        //         "gato",
+        //         "sapo",
+        //         "pássaro",
+        //         "peixe"
+        //     ];
+
+        //     contagem = animais.length;
+        //     var textCorpo = "";
+        //     for (let i = 0; i < contagem; i++) {
+        //         textCorpo += "<tr>" +
+        //                         "<td>" + (i + 1) + "</td>"+
+        //                         "<td>" + animais[i] + "</td>"+
+        //                      "</tr>";
+        //     }
+        //     document.getElementById("tabelaCorpo").innerHTML = textCorpo;
+        // }
+
+        // tabela com createElement
+        window.onload = function(){
+
+            var novaTrHead = document.createElement("tr");
+            novaTrHead.setAttribute("id", "linhaHead");
+            var trHead = document.getElementById("tabelaHead");
+            trHead.appendChild(novaTrHead);
+
+            var novaThHead = document.createElement("th");
+            novaThHead.setAttribute("id", "colunaHead");
+            novaThHead.setAttribute("class", "colunaHead");
+            novaThHead.innerText = "#";
+            novaTrHead.appendChild(novaThHead);
+
+            var novaThHead1 = document.createElement("th");
+            novaThHead1.setAttribute("id", "colunaHead");
+            novaThHead.setAttribute("class", "colunaHead");
+            novaThHead1.innerText = "Nome";
+            novaTrHead.appendChild(novaThHead1);
+
+            let counter = 1;
+            animais = [
+                    "cachorro",
+                    "gato",
+                    "sapo",
+                    "pássaro",
+                    "peixe"
+                ];
+
+
+            var trBody = document.getElementById("tabelaBody");
+            var contagem = animais.length;   
+            for (let i = 0; i < contagem; i++) {
+                    var novaTrBody = document.createElement("tr");
+                    novaTrBody.setAttribute("id", "linhaBody");
+
+                    var novaTdBody = document.createElement("td");
+                    novaTdBody.setAttribute("id", "colunaBody");
+                    novaTdBody.setAttribute("class", "colunaBody");
+                    novaTdBody.innerText = (i + 1);
+                    novaTrBody.appendChild(novaTdBody);
+
+                    var novaTdBody1 = document.createElement("td");
+                    novaTdBody1.setAttribute("id", "colunaBody");
+                    novaTdBody1.setAttribute("class", "colunaBody");
+                    novaTdBody1.innerText = animais[i];
+                    novaTrBody.appendChild(novaTdBody1);
+
+                    trBody.appendChild(novaTrBody);
+                }
+                // let counter = 1;
+                // while (counter <= 5) {
+                //     var novaTrBody = document.createElement("tr");
+                //     novaTrBody.setAttribute("id", "linhaBody");
+                //     var trBody = document.getElementById("tabelaBody");
+                //     trBody.appendChild(novaTrBody);
+
+                //     var novaTdBody = document.createElement("td");
+                //     novaTdBody.setAttribute("id", "colunaBody");
+                //     novaTdBody.setAttribute("class", "colunaBody");
+                //     novaTrBody.appendChild(novaTdBody);
+
+                //     var novaTdBody1 = document.createElement("td");
+                //     novaTdBody1.setAttribute("id", "colunaBody");
+                //     novaTdBody.setAttribute("class", "colunaBody");
+                //     novaTrBody.appendChild(novaTdBody1);
+                // counter += 1;
+                // }
+        }
+    </script>
+</body>
+</html>

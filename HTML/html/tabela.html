@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/tabela.css'>
+    <title>tabela | brasileirão série a 2023</title>
+</head>
+<body>
+    <div id="fecharMenu" class="fundo" onclick="closeMenu()"></div><!--div usada no js para o menu lateral-->
+    <div class="cabecalho">
+        <div class="menuCima">
+            <div class="campoMenu d-flex mudarCursor margem" onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <span>MENU</span>
+            </div>
+            <div class="campoMenu margem">
+                <img src="../img/icone_ge.png" class="mudarCursor" width="60px" height="60px">
+            </div>
+            <div class="campoMenu container-escudo margem">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="mudarCursor" viewBox="0 0 16 16">
+                    <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                </svg>
+                <div class="containerMosaico">
+                    <div class="mosaico">
+                        <div class="selecaoSerie">
+                            <span class="opcaoSerie serieA" id="botaoAtivoA" onclick="abrirMosaicoA()">SÉRIE A</span>
+                            <span class="opcaoSerie serieB" id="botaoAtivoB" onclick="abrirMosaicoB()">SÉRIE B</span>
+                            <span class="opcaoSerie serieEuropa" id="botaoAtivoEuropa" onclick="abrirMosaicoEuropa()">EUROPA</span>
+                        </div>
+                        <div class="conjuntoBrasoes" id="timesSerieA">
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/09/09/Athletico-PR.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/09/30/Corinthians.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/12/26/Cuiaba_EC.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/09/19/Fortaleza_2021_1.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/03/01/GOIAS-2021.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg" width="40px" height="40px">
+                            </span>
+                        </div>
+                        <div class="conjuntoBrasoes" id="timesSerieB">
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2022/11/14/ABC-RN.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2020/07/02/atletico-go-2020.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/09/04/avai-futebol-clube.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2023/04/25/Botafogo-SP-RiberaoPreto.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/10/10/ceara.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/crb.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/criciuma.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/guarani.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/01/08/Ituano_Futebol_Clube.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/04/29/Juventude-2021-01.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/londrina.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2023/05/03/mirassol-futebol-clube_ygRzqmz.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/01/08/Novohorizontino.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/03/17/ponte-preta.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/12/sampaio-correa.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/sport.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/01/21/Tombense.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/04/07/vilanova.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/vitoria.svg" width="40px" height="40px">
+                            </span>
+                        </div>
+                        <div class="conjuntoBrasoes" id="timesEuropa">
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/11/arsenal.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/12/18/atletico-madrid-new.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/11/barcelona.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/bayern-de-munique.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/11/benfica.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/11/borussia-dortmund.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/11/chelsea.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2021/03/31/Inter_de_Mil%C3%A3o_2021.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2020/12/21/juventus-italia-svg.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/12/liverpool.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2019/03/10/Olympique_Lyonnais-01.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/manchester-city.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/11/manchester-united.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/11/milan.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/07/30/NAPOLI_SVG.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/12/paris-saint-germain.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/12/porto.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/12/real-madrid.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/teams/2018/03/12/roma.svg" width="40px" height="40px">
+                            </span>
+                            <span class="time">
+                                <img src="https://s.sde.globo.com/media/organizations/2018/03/11/tottenham.svg" width="40px" height="40px">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="brasileirao">BRASILEIRÃO SÉRIE A</div>
+            <div class="pesquisa">
+                <div class="campoPesquisa">
+                    <div class="campoPesquisaFundo mudarCursor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="lupa" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <input type="search" class="inputPesquisa" placeholder="BUSCAR">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linhaDivisoria"></div>
+        <div class="menuBaixo">
+            <span class="menuBaixoOpcoes ativo">classificação</span>
+            <span class="menuBaixoOpcoes">simulador</span>
+            <span class="menuBaixoOpcoes">vídeos</span>
+            <span class="menuBaixoOpcoes">estatísticas</span>
+            <span class="menuBaixoOpcoes">VAR</span>
+        </div>
+        <div id="menuLateral" class="menuLateral">
+            <span class="opcoesMenuLateral">brasileirão</span>
+            <span class="opcoesMenuLateral">agenda</span>
+            <span class="opcoesMenuLateral">times
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">tabelas
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">vídeos</span>
+            <span class="opcoesMenuLateral">cartola
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">cartola express</span>
+            <span class="opcoesMenuLateral">baixe o app ge</span>
+            <span class="opcoesMenuLateral">futebol internacional
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">seleção brasileira</span>
+            <span class="opcoesMenuLateral">vôlei
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">nba
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">surfe
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">olimpíadas
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">combate
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">premiere
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">fórmula 1
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">esportes
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">eu atleta
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">podcasts</span>
+            <span class="opcoesMenuLateral">na tv
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <span class="opcoesMenuLateral">princípios editoriais</span>
+            <span class="opcoesMenuLateral">outros esportes
+                <span class="setaVerde"><img src="../img/setaVerdeDireita.png" height="20px" width="20px"></span>
+            </span>
+            <div class="linhaDivisoriaLateral"></div>
+            <br>
+        </div>
+    </div>
+    <div class="espacamento"></div>
+    <div class="container"><!--tabela com pontuações e data dos jogos-->
+        <div class="tabela">
+            <div class="tabelaTitulo">TABELA</div>
+            <table class="tabelaClassificacao">
+                <thead>
+                    <tr>
+                        <!-- colspan significa o número de colunas que a th irá contemplar -->
+                        <th colspan="2" class="tabelasCabecalho">CLASSIFICAÇÃO</th> 
+                        <th>P</th>
+                        <th>J</th>
+                        <th>V</th>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>GP</th>
+                        <th>GC</th>
+                        <th>SG</th>
+                        <th>%</th>
+                        <th class="ultimosJogos">ÚLT.JOGOS</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaBody">
+                </tbody>
+            </table>
+        </div>
+        <div class="jogos">
+            <div class="jogosTexto">JOGOS</div>
+                <div class="rodada">
+                    <div class="mudarCursor">
+                        <img id="desabilitado" onclick="rodadaAnterior()" src="../img/setaVerdeEsquerda.png" width="17px" height="17px">
+                        <input type="hidden" id="rodadaAnterior">
+                    </div>
+                    <div id="rodadaTextoParente" class="rodadaTextoContainer">
+                    </div>
+                    <div class="mudarCursor">
+                        <img onclick="proximaRodada()" src="../img/setaVerdeDireita.png" width="17px" height="17px">
+                        <input type="hidden" id="rodadaProxima">
+                    </div>
+                </div>
+                <div id="divParente">
+                </div>
+            </div>
+        </div>
+        <div class="espacamento"></div>
+        <div class="artilharia">
+            <div class="principaisArtilheiros">PRINCIPAIS ARTILHEIROS</div>
+            <div class="artilhariaCabecalho">
+                <div>RANKING</div>
+                <div>GOLS</div>
+            </div>
+                <div class="artilhariaInfo" id="artilhariaInfo">
+                </div>
+        </div>
+        <div class="espacamento"></div>
+    </div>
+    <!--não escrever nada depois da tag script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/tabela.js"></script>
+</body>
+</html>

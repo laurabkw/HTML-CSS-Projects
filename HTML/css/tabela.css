@@ -1,0 +1,646 @@
+body{
+    margin: 0px;
+    font-family: system-ui;
+}
+
+.fundo{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.349);
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    transition: 0.5s;
+    display: none;
+}
+
+.cabecalho{
+    font-family: system-ui;
+}
+
+.menuCima{
+    background-color: #06AA48;
+    color: white;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.mudarCursor{
+    cursor: pointer;
+}
+
+.campoMenu{
+    font-size: 14px;
+    font-weight: 700;
+    align-items: center;
+}
+
+.menuLateral{
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 80%;
+    height: 100%;
+    overflow-x: auto;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+.opcoesMenuLateral{
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    font-family: system-ui;
+    font-size: 25px;
+    color: gray;
+    font-weight: 100;
+}
+
+.opcoesMenuLateral:hover{
+    transition: 0.3s;
+    color: #06AA48;
+}
+
+.linhaDivisoriaLateral{
+    width: 90%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    margin-left: 4%;
+}
+
+.brasileirao{
+    font-size: 30px;
+    font-weight: 200;
+    width: 35%;
+    margin: auto;
+    text-align: center;
+}
+
+.margem{
+    padding-right: 2%;
+}
+
+.pesquisa{
+    width: 15%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.campoPesquisa{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.campoPesquisaFundo{
+    background-color: #058d3c;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+    transition-duration: 1s;
+}
+
+.lupa{
+    transition-duration: 1s;
+}
+
+.inputPesquisa{
+    width: 150px;
+    height: 100%;
+    outline: none;
+    background-color: #058d3c;
+    border: none;
+    padding-left: 5px;
+    transition-duration: 1s;
+}
+
+.inputPesquisa::placeholder{
+    color: white;
+    font-weight: 700;
+    font-family: system-ui;
+    font-size: 15px;
+}
+
+.inputPesquisa:focus-visible{
+    background: white;
+    outline: none;
+    width: 200px;
+    transition-duration: 0.7s;
+}
+
+.inputPesquisa:focus-visible::placeholder{
+    color: rgb(116, 114, 114);
+}
+
+.campoPesquisaFundo:has(.inputPesquisa:focus-visible) .lupa{
+    color: rgb(116, 114, 114);
+    background: transparent;
+    transition-duration: 0.7s;
+}
+
+.campoPesquisaFundo:has(.inputPesquisa:focus-visible){
+    background: white;
+    transition-duration: 0.7s;
+}
+
+.containerMosaico{
+    display: none;
+}
+
+.container-escudo:hover .containerMosaico{
+    display: block;
+}
+
+#timesSerieB, #timesEuropa{
+    display: none;
+}
+
+.mosaico{
+    width: 16%;
+    height: 350px;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: -25px;
+    box-shadow: 0 -1px 5px 3px rgba(0,0,0,0.2);;
+}
+
+.selecaoSerie{
+    display: flex;
+    align-items: center;
+    height: 15%;
+    justify-content: center;
+}
+
+.opcaoSerie{
+    color: rgb(209, 208, 208);
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-top: 1px solid rgb(209, 208, 208);
+    border-bottom: 1px solid rgb(209, 208, 208);
+    height: 20px;
+    align-items: center;
+}
+
+#botaoAtivoA{
+    border-bottom: 2px solid #06AA48;
+    color: #06AA48;
+}
+
+.serieA{
+    border-left: 1px solid rgb(209, 208, 208);
+}
+
+.serieB{
+    border-left: 1px solid rgb(209, 208, 208);
+    border-right: 1px solid rgb(209, 208, 208);
+}
+
+.serieEuropa{
+    border-right: 1px solid rgb(209, 208, 208);
+}
+
+.serieA, .serieB, .serieEuropa, .time{
+    cursor: pointer;
+}
+
+.conjuntoBrasoes{
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.time{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.menuBaixo{
+    background-color: #06AA48;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    width: 95%;
+}
+
+.menuBaixoOpcoes{
+    margin-right: 2%;
+    font-size: 20px;
+    height: 100%;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid transparent;
+    color: rgb(177, 176, 176);
+}
+
+.ativo{
+    color: white !important;
+    border-bottom: 5px solid white !important;
+}
+
+.menuBaixoOpcoes:hover{
+    color: white;
+}
+
+.espacamento{
+    height: 100px;
+}
+
+.linhaDivisoria{
+    width: 100%;
+    border-bottom: 1px solid #05b84d;
+}
+
+.container{
+    width: auto;
+    display: flex;
+}
+
+.tabela{
+    width: 70%;
+    margin-left: 7%;
+    padding-right: 3%;
+    border-spacing: 0;
+    border-right: 1px solid rgb(209, 208, 208);
+}
+
+.tabelaClassificacao{
+    border-top: 1px solid rgb(209, 208, 208);
+    width: 100%;
+    border-spacing: 0;
+}
+
+.tabelaTitulo{
+    font-size: 27px;
+    font-weight: 700;
+    height: 50px;
+}
+
+.tabelasCabecalho{
+    width: 30% !important;
+    text-align: left !important;
+    color: #999;
+    border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.ultimosJogos{
+    width: 10% !important;
+}
+
+.tabela thead tr th{
+    color: #999;
+    font-weight: 400;
+    height: 34px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+    font-size: 11px;
+    width: 6.6%;
+    text-align: center;
+    padding: 0px;
+}
+
+.numeroTabela{
+    font-size: 17px;
+}
+
+.nomeTime, .numeroTabela{
+    text-align: left !important;
+}
+
+.tabela tbody tr td{
+    text-align: center;
+    height: 45px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.vitoriasDerrotas{
+    display: flex;
+    justify-content: center;
+}
+
+.circulo{
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+    border-radius: 7px;
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.verde{
+    background-color: #06AA48;
+}
+
+.vermelho{
+    background-color: red;
+}
+
+.cinza{
+    background-color: rgb(209, 208, 208);
+}
+
+.fundoCinza{
+    background-color: #f5f5f5;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+.jogos{
+    width: 30%; 
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-right: 3%;
+    border-spacing: 0;
+}
+
+.jogosTexto{
+    font-size: 27px;
+    font-weight: 700;
+    height: 50px;
+}
+
+.rodada{
+    border-top: 1px solid rgb(209, 208, 208);
+    border-bottom: 1px solid rgb(209, 208, 208);
+    height: 34px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodadaTextoContainer{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.rodadaTexto{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.jogosInfo{
+    font-size: 11px;
+    text-align: center;
+    font-weight: 600;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.arena{
+    font-weight: 300;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.partidas{
+    display: flex;
+    justify-content: center;
+    height: 67px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+    align-items: center;
+}
+
+.timeSigla{
+    font-size: 20px;
+    font-weight: 200;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.timeExtenso{
+    display: none;
+}
+
+.logoTimes{
+    width: 30px;
+    height: 30px;
+}
+
+.x{
+    font-size: 15px;
+    color: rgb(197, 196, 196);
+    font-weight: 400;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.artilharia{
+    width: auto;
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+}
+
+.artilhariaCabecalho{
+    display: flex;
+    border-top: 1px solid rgb(209, 208, 208);
+    color: #999;
+    font-weight: 400;
+    height: 34px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+    font-size: 11px;
+    text-align: center;
+    padding: 0px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2%;
+}
+
+.principaisArtilheiros{
+    font-size: 24px;
+    font-weight: 700;
+    height: 50px;
+    color: #333;
+}
+
+.divJogador{
+    display: flex;
+    align-items: center;
+    height: 78px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.artilhariaInfo{
+    height: 430px;
+    width: 100%;
+    border-bottom: 1px solid rgb(209, 208, 208);
+    overflow: auto;
+}
+
+.imgJogador{
+    border-radius: 25px;
+    margin-right: 1%;
+}
+
+.imgEscudo{
+    width: 30px;
+    height: 30px;
+}
+
+.jogadorBlock{
+    display: block;
+    margin-left: 2%;
+}
+
+.artilhariaPosicao{
+    width: 35px;
+    color: #999;
+    font-family: opensans,arial,sans-serif;
+    font-size: 28px;
+}
+
+.infoJogador{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.numGols{
+    margin-left: auto;
+    padding-right: 2%;
+    color: #333;
+    font-family: 'opensans-bold',arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.nomeArtilheiro{
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.funcao{
+    color: #999;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+@media only screen and (max-width: 1428px){
+    .rodadaTextoContainer{
+        width: auto;
+    }   
+}
+
+@media only screen and (max-width: 1470px){
+    .container-escudo:hover .containerMosaico{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .container{
+        display: block;
+    }
+
+    .tabela{
+        border-right: none;
+        padding-right: 0%;
+        width: 85%;
+        padding-bottom: 5%;
+    }
+
+    .jogos{
+        padding-right: 0%;
+        width: 85.1%;
+        margin-left: 7%;
+        margin-right: 0%;
+    }
+
+    .rodada{
+        height: 40px;
+    }
+
+    .mudarCursor img{
+        height: 20px;
+        width: 20px;
+    }
+
+    .rodadaTextoContainer{
+        width: auto;
+    } 
+
+    .rodadaTexto{
+        font-size: 20px;
+    }
+
+    .x{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .timeExtenso{
+        font-size: 20px;
+        font-weight: 200;
+        padding-left: 1%;
+        padding-right: 1%;
+        display: block;
+    }
+    
+    .timeSigla{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1022px){
+    .inputPesquisa{
+        width: 100px;
+    }
+
+    .inputPesquisa:focus-visible{
+        background: white;
+        outline: none;
+        width: 150px;
+        transition-duration: 0.7s;
+    }
+}
+
+@media only screen and (max-width: 878px){
+    .brasileirao{
+        width: auto;
+    }
+
+    .inputPesquisa{
+        width: 100px;
+    }
+
+    .inputPesquisa:focus-visible{
+        background: white;
+        outline: none;
+        width: 130px;
+        transition-duration: 0.7s;
+    }
+}

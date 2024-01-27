@@ -1,0 +1,52 @@
+/*aula dia 25/04*/
+/*3 tipos de seletores básicos*/
+/*tag html*/
+/*classe (para comportamento específico)*/
+/*id (para comportamento MUITO específico, tags com o mesmo id podem causar erro no script)*/
+/*
+div {
+    color: blue;
+    background-color: green;
+}
+
+.minhaPrimeiraClasse, .minhaSegundaClasse {
+    color: red;
+    background-color: purple;
+}
+
+.minhaPrimeiraClasse {
+    border: 10px solid;
+    border-radius: 5px;
+}
+
+.minhaSegundaClasse {
+    border: 10px dashed;
+}
+
+#meuSeletorCssId {
+    color: brown;
+    background-color: yellow;
+    border-color: black !important;
+    border: 5px solid;
+}
+*/
+
+.divisorAulas{
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+/*aula dia 25/04*/
+/*vw (width) ou vh(height) fazem o css se adaptar ao tamanho da tela do dispositivo*/
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.box{
+    margin-left: 100px;
+    width: 250px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 3px;
+}

@@ -1,0 +1,192 @@
+.container{
+    width: 100%;
+    display: flex;
+    font-family: system-ui;
+}
+
+.tabela{
+    /* border: 1px solid red; */
+    width: 70%;
+    margin-left: 7%;
+    padding-right: 3%;
+    border-spacing: 0;
+    border-right: 1px solid rgb(209, 208, 208);
+}
+
+table{
+    border-top: 1px solid rgb(209, 208, 208);
+    width: 100%;
+    border-spacing: 0;
+}
+
+.tabelaTitulo{
+    font-size: 27px;
+    font-weight: 700;
+    height: 50px;
+}
+
+.tabelaClassificacao{
+    width: 30% !important;
+    text-align: left !important;
+    color: #999;
+    border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.ultimosJogos{
+    width: 10% !important;
+}
+
+.tabela thead tr th{
+    color: #999;
+    font-weight: 400;
+    height: 34px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+    font-size: 11px;
+    width: 6.6%;
+    text-align: center;
+    padding: 0px;
+}
+
+.numeroTabela{
+    font-size: 17px;
+    width: 2%;
+}
+
+.nomeTime, .numeroTabela{
+    text-align: left !important;
+}
+
+.nomeTime{
+    padding-left: 1%;
+}
+
+.colunaIcone{
+    width: 0%;
+}
+
+.timeLogo{
+    width: 30px;
+    height: 28px;
+}
+
+.tabela tbody tr td{
+    text-align: center;
+    height: 45px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.vitoriasDerrotas{
+    display: flex;
+    justify-content: center;
+}
+
+.circulo{
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+    border-radius: 7px;
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.verde{
+    background-color: #06AA48;
+}
+
+.vermelho{
+    background-color: red;
+}
+
+.cinza{
+    background-color: rgb(209, 208, 208);
+}
+
+.fundoCinza{
+    background-color: #f5f5f5;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+
+.jogos{
+    /* border: 1px solid red; */
+    width: 30%; 
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-right: 3%;
+    border-spacing: 0;
+    height: 45px;
+}
+
+.jogosTexto{
+    font-size: 27px;
+    font-weight: 700;
+    height: 50px;
+}
+
+.rodada{
+    border-top: 1px solid rgb(209, 208, 208);
+    border-bottom: 1px solid rgb(209, 208, 208);
+    height: 34px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodadaTexto{
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 34%;
+    padding-right: 34%;
+}
+
+.jogosInfo{
+    font-size: 11px;
+    text-align: center;
+    font-weight: 600;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.arena{
+    font-weight: 300;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.partidas{
+    display: flex;
+    justify-content: center;
+    height: 67px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+    align-items: center;
+}
+
+.timeTexto{
+    font-size: 20px;
+    font-weight: 200;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.logoTimes{
+    width: 30px;
+    height: 30px;
+}
+
+.x{
+    font-size: 15px;
+    color: rgb(197, 196, 196);
+    font-weight: 400;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+}
